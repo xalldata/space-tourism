@@ -1,0 +1,11 @@
+.home {
+	min-height: 100vh;
+	background-image: url("../../assets/home/background-home-desktop.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hamburger {
+	display: none;
+}
