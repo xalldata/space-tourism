@@ -1,0 +1,126 @@
+.crew-main {
+	min-height: 100vh;
+	background-image: url("../../assets/crew/background-crew-desktop.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.crew-content {
+	margin-top: 76px;
+	display: flex;
+	min-height: 90vh;
+}
+
+.crew-right {
+	display: flex;
+	align-items: flex-end;
+	width: 50%;
+	max-height: 90vh;
+}
+
+.crew-left {
+	padding-left: 10rem;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.crew-title {
+	flex: 1;
+	justify-self: center;
+	margin-bottom: 60px;
+	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 400;
+}
+
+.crew-section {
+	flex: 3;
+}
+
+.circles {
+	flex: 1;
+}
+
+.job {
+	font-family: "Bellefair", serif;
+	font-weight: 400;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+
+.name {
+	font-size: 50px;
+	margin: 15px 0 28px 0;
+}
+
+.bio {
+	color: var(--primary);
+	font-size: 18px;
+	font-family: "Barlow", sans-serif;
+}
+
+.circles {
+	display: flex;
+}
+
+.circles *:not(:last-child) {
+	margin-right: 24px;
+}
+
+.circle {
+	height: 15px;
+	width: 15px;
+	background-color: #979797;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.circle-active {
+	background-color: #fff;
+}
+
+@media only screen and (max-width: 1080px) {
+	.crew-main {
+		min-height: 100vh;
+		background-image: url("../../assets/crew/background-crew-tablet.jpg");
+	}
+	.crew-content {
+		min-height: 100vh;
+		flex-direction: column;
+	}
+	.crew-left {
+		padding: 0 3rem 1rem 3rem;
+		width: 100%;
+	}
+	.crew-section {
+		text-align: center;
+	}
+	.circles {
+		justify-content: center;
+	}
+	.job {
+		font-size: 24px;
+		margin-bottom: 8px;
+	}
+	.name {
+		font-size: 40px;
+	}
+	.bio {
+		margin: 16px 0 16px 0;
+	}
+	.crew-right {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		width: 100%;
+		height: 100%;
+	}
+	.crew-right img {
+		max-width: 100% !important;
+		max-height: 570px !important;
+		display: block;
+		object-fit: contain;
+	}
+}

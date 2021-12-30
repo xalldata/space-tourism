@@ -1,18 +1,134 @@
 nav {
+	position: relative;
+	width: 100%;
+	top: 40px;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	background-color: burlywood;
+	padding-left: 3.4375rem;
+	height: 10vh;
+}
+
+.line {
+	width: 32%;
+	height: 0.5px;
+	background-color: #979797;
+	position: absolute;
+	top: 50%;
+	left: 13rem;
+	z-index: 9999;
+}
+
+.logo {
+	align-self: center;
 }
 
 .links {
+	align-items: center;
 	list-style: none;
 	text-decoration: none;
 	display: flex;
-	background-color: aqua;
+	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(5px);
+	padding: 0 11.25rem 0 3.75rem;
 }
 
 .links * {
+	font-family: "Barlow Condensed", sans-serif;
 	list-style: none;
 	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.links *:not(:last-child) {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.links li {
+	position: relative;
+}
+
+.links li:hover:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	display: block;
+	height: 2px;
+	background: #fff;
+	left: 0;
+	right: 0;
+	bottom: -1.7rem;
+}
+
+.link-numbers {
+	font-weight: bold;
+	margin-right: 0.875rem;
+	letter-spacing: 2px;
+}
+
+.hamburger {
+	display: none;
+}
+
+@media only screen and (max-width: 1500px) {
+	.line {
+		display: none;
+	}
+	nav {
+		top: 0;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	body {
+		overflow-x: hidden;
+	}
+	nav {
+		position: static;
+	}
+	.line {
+		display: none;
+	}
+	.links {
+		min-height: 100%;
+		padding: 0;
+		padding-top: 10vh;
+		padding-left: 32px;
+		width: 50%;
+		flex-direction: column;
+		align-items: flex-start;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: rgba(255, 255, 255, 0.2);
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	.links * {
+		color: #fff;
+		font-weight: bold;
+	}
+	.nav-open {
+		display: flex;
+		transform: translateX(0);
+		z-index: 9999;
+	}
+	.links *:not(:last-child) {
+		margin: 0;
+		margin-bottom: 32px;
+	}
+	.links li:hover:before {
+		display: none;
+	}
+	.hamburger {
+		z-index: 9999;
+		cursor: pointer;
+		display: block;
+		align-self: center;
+	}
+	nav {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
 }

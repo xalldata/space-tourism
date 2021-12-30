@@ -1,11 +1,118 @@
+:root {
+	--primary: #d0d6f9;
+	--secondary: #0b0d17;
+}
+
 .home {
-	min-height: 100vh;
+	min-height: 90vh;
 	background-image: url("../../assets/home/background-home-desktop.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.hamburger {
-	display: none;
+.hero {
+	min-height: 90vh;
+	display: flex;
+	padding: 10rem 0 8rem 13rem;
+}
+
+.left,
+.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 50%;
+}
+
+.right {
+	align-items: center;
+	justify-self: flex-end;
+}
+
+.home-button-wrapper {
+	position: absolute;
+	transform: translateY(5rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25rem;
+	height: 25rem;
+	border-radius: 50%;
+}
+
+.active-home-button {
+	background-color: rgb(255, 255, 255, 0.2);
+}
+
+.home-button {
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	color: var(--secondary);
+	font-size: 2rem;
+	width: 15rem;
+	height: 15rem;
+	border-radius: 50%;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.home-subtitle {
+	color: var(--primary);
+	font-size: 1.75rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.home-subtitle,
+.home-title {
+	margin-bottom: 1.5rem;
+}
+
+.title {
+	font-size: 9.375rem;
+	text-transform: uppercase;
+	font-family: "Bellefair", serif;
+	font-weight: 400;
+}
+
+.home p {
+	color: var(--primary);
+	font-size: 1.125rem;
+	font-family: "Barlow", sans-serif;
+	line-height: 2rem;
+}
+
+@media only screen and (max-width: 1140px) {
+	.home {
+		background-image: url("../../assets/home/background-home-tablet.jpg");
+	}
+	.hero {
+		flex-direction: column;
+		padding: 0.5rem;
+		justify-content: center;
+		align-items: center;
+	}
+	.left {
+		text-align: center;
+		margin-bottom: 80px;
+	}
+	.left,
+	.right {
+		width: 100%;
+	}
+	.home-button-wrapper {
+		position: static;
+		transform: translateY(0);
+	}
+}
+
+@media only screen and (max-width: 1140px) {
+	.home {
+		background-image: url("../../assets/home/background-home-mobile.jpg");
+	}
 }

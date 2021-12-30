@@ -1,0 +1,186 @@
+.destination-main {
+	min-height: 100vh;
+	min-width: 100%;
+	background-image: url("../../../assets/destination/background-destination-desktop.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.destination-container {
+	min-height: 90vh;
+	padding-left: 10.375rem;
+	padding-right: 10.375rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.page-title {
+	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 400;
+	margin: 40px 0 70px 0;
+}
+
+.planet-content {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.planet-right,
+.planet-left {
+	width: 50%;
+}
+
+.planet-left {
+	display: flex;
+	justify-content: center;
+}
+
+.planet-links {
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.planet-links a {
+	margin: 0;
+}
+
+.planet-links * {
+	font-family: "Barlow Condensed", sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	list-style: none;
+	font-size: 1rem;
+}
+
+.planet-links *:not(:last-child) {
+	margin-right: 35px;
+}
+
+.planet-links li {
+	cursor: pointer;
+	position: relative;
+}
+
+.planet-links li:hover:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	display: block;
+	height: 1px;
+	background: #979797;
+	left: 0;
+	right: 0;
+	bottom: -0.75rem;
+}
+
+.destination-active::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	display: block;
+	height: 1px;
+	background: #fff;
+	left: 0;
+	right: 0;
+	bottom: -0.75rem;
+}
+
+.destination-line {
+	height: 1px;
+	background-color: #979797;
+	margin: 54px 0 28px 0;
+}
+
+.distance {
+	display: flex;
+	text-transform: uppercase;
+}
+
+.distance-left {
+	margin-right: 79px;
+}
+
+.destination-title {
+	font-size: 6.25rem;
+	text-transform: uppercase;
+}
+
+.destination-paragraph {
+	font-size: 1.125rem;
+	color: var(--primary);
+}
+
+.distance h4 {
+	color: var(--primary);
+	font-family: "Barlow Condensed", sans-serif;
+	font-size: 0.875rem;
+	font-weight: 400;
+	margin-bottom: 12px;
+}
+
+.distance span {
+	font-size: 28px;
+	font-weight: 400;
+	font-family: "Bellefair", serif;
+}
+
+@media only screen and (max-width: 1000px) {
+	.destination-main {
+		height: 100%;
+		background-image: url("../../../assets/destination/background-destination-tablet.jpg");
+	}
+	.destination-container {
+		height: 100%;
+		padding: 0;
+	}
+	.page-title {
+		margin: 40px 0 40px 40px;
+	}
+	.planet-links {
+		justify-content: center;
+	}
+	.planet-content {
+		text-align: center;
+		flex-direction: column;
+	}
+	.planet-left,
+	.planet-right {
+		width: 100%;
+	}
+	.planet-left img {
+		width: 50%;
+		height: 50%;
+	}
+	.planet-right {
+		padding: 3rem 2.5rem 3rem 2.5rem;
+	}
+	.distance {
+		justify-content: center;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.destination-main {
+		height: 100%;
+		background-image: url("../../../assets/destination/background-destination-mobile.jpg");
+	}
+	.planet-content {
+		flex-direction: column;
+	}
+	.planet-left,
+	.planet-right {
+		min-width: 100%;
+	}
+	.planet-right {
+		padding: 0;
+	}
+	.distance {
+		flex-direction: column;
+	}
+	.distance-left {
+		margin: 0;
+	}
+}
